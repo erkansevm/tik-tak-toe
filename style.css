@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+ *, *::after, *::before{
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+body{
+  margin: 0;
+}
+
+:root {
+  --cell-size: 100px;
+  --mark-size:calc(var(--cell-size)*.9);
+}
+
+
+ .board{
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .info{
+   margin-bottom: 40px;
+ }
+ .info p{
+   font-size: 1em;
+   font-weight: bold;
+ }
+
+ .content {
+   width: calc(var(--cell-size)*3);
+   display: flex;
+   flex-wrap: wrap;
+ }
+ .cell{
+   width: var(--cell-size);
+   height: var(--cell-size);
+   border: 1px solid black;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 4em;
+   font-weight: 400;
+   cursor: pointer;
+ }
+
+ .cell:first-child,
+ .cell:nth-child(2),
+ .cell:nth-child(3){
+   border-top: none;
+ }
+
+ .cell:nth-child(3n + 1){
+   border-left: none;
+ } 
+
+ .cell:nth-child(3n + 3){
+   border-right: none;
+ }
+
+ .cell:last-child,
+ .cell:nth-child(8),
+ .cell:nth-child(7){
+   border-bottom: none;
+ }
+
+ button{
+   margin-top: 25px;
+   background: none;
+   border: none;
+   font-size: 1.2em;
+   font-weight: bold;
+   transition: 300ms all ease;
+   color: rgb(82, 82, 82);
+ }
+
+ button:hover{
+  outline: none;
+  font-size: 1.3em;
+  color: black2;
+ }
+ button:focus{
+  outline: none;
+ }
